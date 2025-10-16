@@ -44,3 +44,21 @@ console.log(typeof(book));
 let mySymbol=Symbol('Описание моего символа');
 console.log(mySymbol);
 console.log(typeof(mySymbol));
+
+//Явное преобразование типов
+
+//преобразование строки в число
+let string="123";
+let num=Number(string);
+
+//преобразование числа в строку
+let age=33;
+let string=String(age);
+
+//преобразование логического значения в число
+let bool=true;
+let num=Number(bool);
+
+//преобразование числа в логическое значение
+let number=0;
+let bool=Boolean(number);
