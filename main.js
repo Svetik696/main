@@ -62,3 +62,14 @@ let num=Number(bool);
 //преобразование числа в логическое значение
 let number=0;
 let bool=Boolean(number);
+
+//неявное преобразование типов
+//сложение числа и строки
+let age=33;
+let string="123";
+let result=age+string; //33123
+
+//сравнение чисел и строк
+let age=33;
+let string="123";
+let result=age==string; //true
