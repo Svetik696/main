@@ -1,75 +1,62 @@
-//string
-let string="Svetlana";
-console.log(string);
-console.log(typeof(string));
-
 //number
 let age=33;
 console.log(age);
-console.log(typeof(age));
 
-//bigint
-let bigNum=12345678901234567890n
-console.log(bigNum);
-console.log(typeof(bigNum));
+//BigInt
+let aLargeNumber=123456789123456789n
+console.log(aLargeNumber);
+
+//string
+let name='Svetlana';
+console.log(name);
 
 //boolean
-let isLogged=true;
-if (isLogged) {
-    console.log("Пользователь вошел в систему");
-} else {
-    console.log("Пользователь не вошел в систему");
-}
+let isLessSignificant=5<9;//менее значительный
+console.log(isLessSignificant);//выведет true
+
+let isMoreSignificant=5>9;//более значительный
+console.log(isMoreSignificant);//выведет false
 
 //null
-let trash=null;
-console.log(trash);
-console.log(typeof(trash));
+let cat=null;//нет кота
+console.log(cat);//выведет null
 
 //undefined
-let box;
-console.log(box);
-console.log(typeof(box));
+let surname;//не присвоено значение переменной
+console.log(surname);//выведет undefined
 
 //object
-let book={
+let book= {
     title: "Выбор",
     author: "Эдит Ева Эгер",
-    numberOfPages: 445,
-}
-console.log(book);
-console.log(typeof(book));
+    numderOfPages: 455
+};
+console.log(book.title);
+console.log(book.author);
+console.log(book.numderOfPages);
 
-//symbol
-let mySymbol=Symbol('Описание моего символа');
-console.log(mySymbol);
-console.log(typeof(mySymbol));
+//typeof
+console.log(typeof age); //number
+console.log(typeof aLargeNumber);//bigint
+console.log(typeof name);//string
+console.log(typeof isLessSignificant);//boolean
+console.log(typeof isMoreSignificant);//boolean
+console.log(typeof cat);//object
+console.log(typeof surname);//undefined
+console.log(typeof book);//object
 
-//Явное преобразование типов
+//Явное преобразование
+//Строковое преобразование
+let price=105;
+console.log(typeof price);
+price=String(price);
+console.log(typeof price);
 
-//преобразование строки в число
-let string="123";
-let num=Number(string);
+//Численное преобразование
+let str="89";
+console.log(typeof str);
+let num=Number(str);//становится числом 89
+console.log(typeof num);//number
 
-//преобразование числа в строку
-let age=33;
-let string=String(age);
-
-//преобразование логического значения в число
-let bool=true;
-let num=Number(bool);
-
-//преобразование числа в логическое значение
-let number=0;
-let bool=Boolean(number);
-
-//неявное преобразование типов
-//сложение числа и строки
-let age=33;
-let string="123";
-let result=age+string; //33123
-
-//сравнение чисел и строк
-let age=33;
-let string="123";
-let result=age==string; //true
+let bigNumber=Number("Хочется спать");
+console.log(bigNumber);//NaN преобразование не удалось
